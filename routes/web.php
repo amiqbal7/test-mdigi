@@ -5,7 +5,6 @@ use App\Http\Controllers\RekeningController;
 use App\Http\Controllers\SummaryController;
 use App\Http\Controllers\TargetController;
 use App\Http\Controllers\TransactionController;
-use App\Models\Rekening;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//summary route
+//summary route (index route)
 Route::get('/', [SummaryController::class, 'index'])->name('summary.index');
 
 //Target routes

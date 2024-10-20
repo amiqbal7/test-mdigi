@@ -14,7 +14,7 @@ class TargetController extends Controller
 {
     public function index()
     {
-        $targets = Target::orderByDesc('id')->paginate(5);
+        $targets = Target::orderByDesc('id')->paginate(10);
         $rekenings = Rekening::orderByDesc('id')->get();
         return view('frontend.target.index', compact('targets', 'rekenings'));
     }

@@ -22,7 +22,7 @@ class TransactionController extends Controller
             $transactions->whereBetween('deposit_date', [$startDate, $endDate]);
         }
 
-        $transactions = $transactions->orderByDesc('id')->paginate(5);
+        $transactions = $transactions->orderByDesc('id')->paginate(10);
         $rekenings = Rekening::orderByDesc('id')->get();
         return view('frontend.transaction.index', compact('transactions', 'rekenings', 'startDate', 'endDate'));
     }

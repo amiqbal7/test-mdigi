@@ -43,7 +43,7 @@
                                 <th>No</th>
                                 <th>Nomer Rekening</th>
                                 <th>Nama Rekening</th>
-                                <th>Target</th>
+                                <th>Target (Rp.)</th>
                                 <th>Masa Berlaku</th>
                                 <th>Aksi</th>
                             </tr>
@@ -55,7 +55,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $target->rekening->rekening_code ?? 'N/A' }}</td>
                                     <td>{{ $target->rekening->rekening_name ?? 'N/A' }}</td>
-                                    <td>Rp. {{ $target->target }}</td>
+                                    <td>{{ number_format($target->target, 0, ',', '.') }}</td>
                                     <td>{{ $target->validity_period_start }} s/d {{ $target->validity_period_end }}</td>
                                     <td>
                                         <a href="{{ route('target.edit', $target->id) }}"

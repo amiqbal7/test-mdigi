@@ -65,7 +65,7 @@
                                 <th>Nama Rekening</th>
                                 <th>Via Bayar</th>
                                 <th>Tanggal Setor</th>
-                                <th>Jumlah Bayar</th>
+                                <th>Jumlah Bayar (Rp.)</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -78,7 +78,7 @@
                                     <td>{{ $transaction->rekening->rekening_name ?? 'N/A' }}</td>
                                     <td> {{ $transaction->payment_via }}</td>
                                     <td>{{ \Carbon\Carbon::parse($transaction->deposit_date)->format('d-m-Y') }}</td>
-                                    <td> {{ $transaction->payment_amount }}</td>
+                                    <td> {{ number_format($transaction->payment_amount, 0, ',', '.') }}</td>
 
                                     <td>
                                         <a href="{{ route('transaction.edit', $transaction->id) }}"

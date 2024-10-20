@@ -26,15 +26,23 @@
             text-align: center;
             border: 1px solid black;
             padding: 8px;
-            text-align: left;
         }
 
         th {
             background-color: #f2f2f2;
+            text-align: center;
         }
 
         .total-row {
             font-weight: bold;
+        }
+        p {
+            text-align: center;
+
+        }
+        h1 {
+            text-align: center;
+
         }
     </style>
 </head>

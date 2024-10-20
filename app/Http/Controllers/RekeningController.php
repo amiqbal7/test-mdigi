@@ -10,10 +10,15 @@ use Illuminate\Support\Str;
 
 class RekeningController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $rekenings = Rekening::orderByDesc('id')->paginate(5);
-        return view('frontend.rekening.index', compact('rekenings'));
+        $search = $request->input('search');
+
+        $rekenings = Rekening::when($search, function ($query, $search) {
+            return $query->where('rekening_name', 'like', '%' . $search . '%');
+        })->orderByDesc('id')->paginate(10);
+
+        return view('frontend.rekening.index', compact('rekenings', 'search'));
     }
 
     public function create()
@@ -40,15 +45,6 @@ class RekeningController extends Controller
         return redirect()->route('rekening.index')->with('success', 'Rekening deleted successfully.');
     }
 
-    public function update(StoreRekeningRequest $request, $id)
-    {
-        DB::transaction(function () use ($request, $id) {
-            $validated = $request->validated();;
-            $validated['slug'] = Str::slug($validated['rekening_name']);
-            $rekening = Rekening::findOrFail($id);
-            $rekening->update($validated);
-        });
 
-        return redirect()->route('rekening.index')->with('success', 'Target updated successfully.');
-    }
+
 }
