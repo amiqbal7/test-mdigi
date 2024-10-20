@@ -76,8 +76,8 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $transaction->rekening->rekening_code ?? 'N/A' }}</td>
                                     <td>{{ $transaction->rekening->rekening_name ?? 'N/A' }}</td>
-                                    <td>{{ $transaction->deposit_date }}</td>
                                     <td> {{ $transaction->payment_via }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($transaction->deposit_date)->format('d-m-Y') }}</td>
                                     <td> {{ $transaction->payment_amount }}</td>
 
                                     <td>

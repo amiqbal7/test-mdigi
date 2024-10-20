@@ -19,7 +19,7 @@ class TransactionController extends Controller
         $transactions = Transaction::query();
 
         if ($startDate && $endDate) {
-            $transactions->whereBetween('created_at', [$startDate, $endDate]);
+            $transactions->whereBetween('deposit_date', [$startDate, $endDate]);
         }
 
         $transactions = $transactions->orderByDesc('id')->paginate(5);
