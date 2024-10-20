@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Perpustakaan SMK 2 Surakarta</title>
-
+    <title>@yield('title', 'Default Title')</title>
+    <link rel="icon" type="image/png" href="{{ asset('img/laravel.png') }}">
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link

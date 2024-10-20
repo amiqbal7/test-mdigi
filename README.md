@@ -27,25 +27,27 @@ Proyek ini adalah aplikasi manajemen rekening dan transaksi yang dibangun dengan
 
     - Menambah, mengedit, dan menghapus rekening.
     - Melihat daftar semua rekening yang ada.
+    - Mencari data menggunakan search.
 
 2. **CRUD Transaksi**
 
     - Menambah, mengedit, dan menghapus transaksi.
     - Melihat daftar semua transaksi yang terkait dengan rekening.
+    - Mencari data menggunakan search.
 
 3. **CRUD Target**
 
     - Menambah, mengedit, dan menghapus target.
     - Melihat daftar semua target yang telah ditetapkan.
+    - Mencari data menggunakan search.
 
 4. **Laporan**
     - Menghasilkan laporan transaksi yang dapat diunduh dalam format PDF.
+    - Mencetak report data dengan melakukan filter sesuai range waktu yang ditentukan.
 
 ## Cara Menjalankan Proyek
 
 1. **Kloning Repository**
-
-    Pertama, klon repositori ini ke mesin lokal Anda:
 
     ```bash
     git clone https://github.com/amiqbal7/test-mdigi.git
@@ -53,25 +55,60 @@ Proyek ini adalah aplikasi manajemen rekening dan transaksi yang dibangun dengan
     ```
 
 2. **Masuk ke Direktori Proyek**
-   cd test-mdigi
+
+    ```bash
+    cd test-mdigi
+
+    ```
 
 3. **Instalasi Dependensi**
 
+    ```bash
     composer install
 
-4. **Konfigurasi .env**
+    ```
+
+4. **Lakukan Konfigurasi .env**
 
 5. **Migrasi database**
-   php arisan migrate
+
+    ```bash
+    php arisan migrate
+
+    ```
 
 6. **Jalankan Seeder**
-   -php artisan db:seed --class=RekeningSeeder
-   -php artisan db:seed --class=TransactionSeeder
-   -php artisan db:seed --class=TargetSeeder
+
+    ```bash
+    php artisan db:seed --class=RekeningSeeder
+
+    ```
+
+    ```bash
+    php artisan db:seed --class=TransactionSeeder
+
+    ```
+
+    ```bash
+    php artisan db:seed --class=TargetSeeder
+
+    ````
 
 7. **Instalasi Frontend Dependencies dan Build**
-   -npm install
-   -npm run dev
+
+    ```bash
+    npm install
+
+    ```
+
+    ```bash
+    npm run dev
+
+    ```
 
 8. **jalankan server**
-   php artisan serve
+
+    ```bash
+     php artisan serve
+
+    ```

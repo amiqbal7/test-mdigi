@@ -1,5 +1,7 @@
 @extends('layouts.mainLayouts')
 
+@section('title', 'Tambah Data Rekening')
+
 @section('content')
     <div class="container mt-5">
         <h1 class="h3 mb-3">Tambah Rekening</h1>

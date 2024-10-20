@@ -1,5 +1,7 @@
 @extends('layouts.mainLayouts')
 
+@section('title', 'Edit Data Target')
+
 @section('content')
     <div class="container-fluid mt-5">
         <h1 class="h3 mb-2 text-gray-800">Target</h1>

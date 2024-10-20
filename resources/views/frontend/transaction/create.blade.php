@@ -1,5 +1,7 @@
 @extends('layouts.mainLayouts')
 
+@section('title', 'Tambah Data Transaksi')
+
 @section('content')
     <div class="container-fluid mt-5">
 

@@ -1,5 +1,7 @@
 @extends('layouts.mainLayouts')
 
+@section('title','Laporan Pendapatan')
+
 @section('content')
     <div class="container-fluid">
 

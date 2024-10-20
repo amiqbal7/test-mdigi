@@ -1,4 +1,6 @@
 @extends('layouts.mainLayouts')
+@section('title', 'Ringkasan')
+
 
 @section('content')
     <div class="row container-fluid">
