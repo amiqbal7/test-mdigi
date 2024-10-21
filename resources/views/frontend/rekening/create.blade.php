@@ -15,7 +15,7 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="rekening_code" class="form-label re">Nomer Rekening</label>
+                        <label for="rekening_code" class="form-label">Nomer Rekening</label>
                         <input type="text" class="form-control @error('rekening_code') is-invalid @enderror" id="rekening_code" name="rekening_code" value="{{ old('rekening_code') }}" required>
                         @error('rekening_code')
                             <div class="invalid-feedback">{{ $message }}</div>

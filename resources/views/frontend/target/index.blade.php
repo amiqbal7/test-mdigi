@@ -56,7 +56,7 @@
                                     <td>{{ $target->rekening->rekening_code ?? 'N/A' }}</td>
                                     <td>{{ $target->rekening->rekening_name ?? 'N/A' }}</td>
                                     <td>{{ number_format($target->target, 0, ',', '.') }}</td>
-                                    <td>{{ $target->validity_period_start }} s/d {{ $target->validity_period_end }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($target->validity_period_start)->format('d-m-Y') }} s/d {{ \Carbon\Carbon::parse($target->validity_period_end)->format('d-m-Y') }}</td>
                                     <td>
                                         <a href="{{ route('target.edit', $target->id) }}"
                                             class="btn btn-warning btn-sm">Edit</a>
@@ -70,7 +70,6 @@
                                     </td>
                                 </tr>
                             @endforeach
-
                         </tbody>
                     </table>
                 </div>
